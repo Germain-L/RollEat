@@ -1,5 +1,5 @@
 # RollEat | What is it ?
-RollEat is an EPSI Bordeaux open innov project.
+RollEat is an EPSI Bordeaux Open Innov project.
 
 ## What does it do ?
 RollEat is an service where the user orders food, however the food is selected at random from a given criteria.
