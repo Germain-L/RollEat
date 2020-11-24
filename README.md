@@ -1,20 +1,16 @@
-# RollEat | What is it ?
-RollEat is an EPSI Bordeaux Open Innov project.
+# RollEat | Qu'est ce que c'est ?
+RollEat est un projet Open Innov de l'EPSI Bordeaux
 
-## What does it do ?
+## Qu'est ce que ca fait ?
 RollEat is an service where the user orders food, however the food is selected at random from a given criteria.
+RollEat est un service ou l'utilisateur commande des plats, mais le plat est séléctionné a partir de critère préselectionné par l'utilisateur.
 
-The criteria is as such:
- - A given budget (maximum price).
- - How many servings.
- - A health level of the dish (i imagine it as a slider with fastfood on one side and salads on the other).
- - Any allergies.
- - Any food that is disliked.
+Les critère sont :
+ - Un budget (prix maximum).
+ - Combien de portions.
+ - Un niveau d'equilibrage du plat.
+ - Des allergies possibles.
+ - Des plats ou condiments non aimé.
 
 
-RollEat will also be able to somehow find out how a restaurant is doing, and if required skew the randomness towards a meal from that restaurant. In a way it will help local businesses.
-
-The app could also ask the user to rate the received food and over time create second option to get surprised by receiving something they have already liked.
-
-## Technologies
-Technologies have not been selected yet
+Le service pourrai aussi demandé une notes des plats reçu par un utilisateur, pour garder une trace des plats et proposé une option "safe" que l'utilisateur est sur d'aimé.
