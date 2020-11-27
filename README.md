@@ -29,3 +29,8 @@ Commande:
    - Allergies
    - Régime alimentaire
    - Aliments non aimé
+
+## Stack utilisée
+ - Vue.JS: [https://fr.vuejs.org](https://fr.vuejs.org)
+ - Vuetify: [https://vuetifyjs.com/](https://vuetifyjs.com)
+ - Firebase: [https://www.google.com](https://www.google.com)
