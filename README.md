@@ -1,10 +1,10 @@
-# RollEat | Qu'est ce que c'est ?
+# RollEat | Qu'est-ce que c'est ?
 RollEat est un projet Open Innov de l'EPSI Bordeaux
 
-## Qu'est ce que ca fait ?
-RollEat est un service ou l'utilisateur commande des plats, mais le plat est séléctionné a partir de critère préselectionné par l'utilisateur.
+## Qu'est-ce que ça fait ?
+RollEat est un service où l'utilisateur commande un plat ou un menu, mais le plat est aléatoirement sélectionné à partir des critères donnés par l'utilisateur.
 
-Le service pourrai aussi demandé une notes des plats reçu par un utilisateur, pour garder une trace des plats et proposé une option "safe" que l'utilisateur est sur d'aimé.
+Le service pourrait aussi demandez une note des plats reçus par un utilisateur, pour garder une trace des plats et proposer une option "safe" que l'utilisateur est sur d'aimer.
 
 
 ## Architecture du projet
@@ -23,8 +23,8 @@ Création de compte:
  
 
 Commande:
- - prix
- - nb de personnes
+ - Prix
+ - Nombre de personnes
  - 1 questionnaire par personne:
    - Allergies
    - Régime alimentaire
