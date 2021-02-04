@@ -3,7 +3,7 @@
     <Header />
     <v-main>
     <v-divider></v-divider>
-      <Home />
+      <router-view></router-view>
     </v-main>
     <v-divider></v-divider>
     <Footer />
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import Home from "./views/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -19,7 +18,6 @@ export default {
   name: "App",
 
   components: {
-    Home,
     Header,
     Footer,
   },
