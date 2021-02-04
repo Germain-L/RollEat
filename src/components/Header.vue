@@ -1,6 +1,7 @@
 <template>
   <v-app-bar app color="white" elevation="0">
-    <v-toolbar-title> <router-link to="/">RollEat</router-link></v-toolbar-title>
+    <v-toolbar-title> 
+      <router-link to="/">RollEat</router-link></v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -8,7 +9,7 @@
 
     <v-divider class="mx-4" vertical></v-divider>
 
-    <v-btn text>Inscription</v-btn>
+    <router-link to="/signup">Inscription</router-link>
   </v-app-bar>
 </template>
 
