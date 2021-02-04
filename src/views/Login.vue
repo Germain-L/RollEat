@@ -12,6 +12,9 @@
             @click:append="showPassword = !showPassword">
            </v-text-field>
             <CustomButton text="Connexion"/>
+            <router-link to="/signup">
+            <p>Je n'ai pas de compte </p>
+            </router-link>
       </v-col>
   </v-container>
 </template>
@@ -39,4 +42,9 @@ export default {
 h2 {
     text-align: center;
 }
+
+.v-btn {
+    margin: 25px;
+}
+
 </style>
