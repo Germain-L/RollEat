@@ -9,6 +9,9 @@ import "firebase/auth";
 Vue.prototype.$db = db;
 Vue.prototype.$firebase = firebase;
 
+import { models } from "./components/toLoad/models";
+Vue.prototype.$models = models;
+
 Vue.config.productionTip = false
 
 firebase.auth().onAuthStateChanged(() => {
