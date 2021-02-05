@@ -11,8 +11,10 @@ Vue.prototype.$firebase = firebase;
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+firebase.auth().onAuthStateChanged(() => {
+  new Vue({
+    router,
+    vuetify,
+    render: h => h(App)
+  }).$mount('#app')
+});
