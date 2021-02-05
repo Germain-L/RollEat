@@ -2,12 +2,14 @@
 	<div class="main">
 		<h1>Test avec Firebase</h1>
 		<p>N'hésites pas à regarder dans la console et dans le code ;)</p>.
-		<button @click="addDocument">Ajoute un document</button>
+		<v-btn @click="addDocument" color="success">Ajoute un document</v-btn>
 
-		<hr>
+		<br/>
 
-		<input type="text" v-model="delDoc">
-		<button @click="delDocument">Supprimer ce document</button>
+		<v-row>
+			<v-text-field v-model="delDoc"></v-text-field>
+			<v-btn @click="delDocument" color="error">Supprimer ce document</v-btn>
+		</v-row>
 	</div>
 </template>
 
