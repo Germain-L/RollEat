@@ -1,15 +1,26 @@
 <template>
   <v-app>
+    <Header />
     <v-main>
+    <v-divider></v-divider>
       <router-view></router-view>
     </v-main>
+    <v-divider></v-divider>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-export default {
-  name: 'App',
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
+export default {
+  name: "App",
+
+  components: {
+    Header,
+    Footer,
+  },
   data: () => ({
     //
   }),
