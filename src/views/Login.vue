@@ -1,6 +1,6 @@
 <template>
   <v-container justify="center">
-      <v-col justify="center" align="center">
+      <v-col class="col-8 offset-2" justify="center" align="center">
           <h2> Connexion </h2>
           <v-text-field label="Email">
             
