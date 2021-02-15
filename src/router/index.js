@@ -47,6 +47,11 @@ const routes = [
     path: '/sandbox/firebase',
     name: 'Firebase-Sandbox',
     component: () => import(/* webpackChunkName: "firebase" */ '../views/sandbox/Firebase.vue')
+  },
+  {
+    path: '/pay',
+    name: 'Paiement',
+    component: () => import(/* webpackChunkName: "firebase" */ '../views/Paiement.vue')
   }
 ];
 
