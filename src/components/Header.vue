@@ -1,15 +1,16 @@
 <template>
 	<v-app-bar app color="white" elevation="0">
 		<v-toolbar-title>
-			<router-link to="/" class="buttons">RollEat</router-link></v-toolbar-title
+			<router-link to="/" class="buttons"
+				>RollEat</router-link
+			></v-toolbar-title
 		>
 
 		<v-spacer></v-spacer>
 
 		<div v-if="loggedIn">
 			<router-link to="/profile"
-				>Coucou
-				{{ $firebase.auth().currentUser.displayName }} !</router-link
+				>Coucou {{ userData.username }}</router-link
 			>
 		</div>
 		<div v-else>
@@ -31,11 +32,23 @@ export default {
 	name: "Header",
 	data() {
 		return {
-			loggedIn: false
+			loggedIn: false,
+			userData: this.$models.user
 		};
 	},
+
 	created() {
 		this.loggedIn = this.$firebase.auth().currentUser ? true : false;
+		this.$db
+			.collection("users")
+			.doc(this.$firebase.auth().currentUser.uid)
+			.onSnapshot(doc => {
+				this.userData = {
+					...this.$models.user,
+					...doc.data(),
+					id: doc.id
+				};
+			});
 	}
 };
 </script>
