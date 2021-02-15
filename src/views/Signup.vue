@@ -35,7 +35,7 @@
 				</v-col>
 			</v-row>
 			<v-container class="py-8">
-				<v-btn  @click="submit()">Inscription</v-btn>
+				<v-btn @click="submit()">Inscription</v-btn>
 			</v-container>
 			<p>
 				<router-link to="/login"> J'ai un compte </router-link>
@@ -68,7 +68,7 @@ export default {
 		},
 
 		submit() {
-			console.log("coucou?");
+			console.log("Mon compte?");
 			if (this.verifyPassword()) {
 				this.$firebase
 					.auth()
