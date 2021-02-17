@@ -76,6 +76,20 @@
 					>Sauvegarder</v-btn
 				>
 			</v-col>
+			<v-snackbar v-model="snackbar" timeout="3000">
+				{{this.snackbarText}}
+
+				<template v-slot:action="{ attrs }">
+					<v-btn
+						color="blue"
+						text
+						v-bind="attrs"
+						@click="snackbar = false"
+					>
+						Fermer
+					</v-btn>
+				</template>
+			</v-snackbar>
 		</v-row>
 	</div>
 </template>
@@ -85,7 +99,9 @@ export default {
 	name: "About",
 	data() {
 		return {
-			userData: this.$models.user
+			userData: this.$models.user,
+			snackbar: false,
+			snackbarText: ""
 		};
 	},
 	methods: {
@@ -100,7 +116,18 @@ export default {
 					{
 						merge: true
 					}
-				);
+				)
+				.then(() => {
+					console.log("Document successfully written!");
+					this.snackbarText = "Votre profil à été mis à jour";
+					this.snackbar = true;
+				})
+				.catch((err) => {
+					console.log(err);
+
+					this.snackbarText = err;
+					this.snackbar = true
+				})
 		}
 	},
 	created() {
