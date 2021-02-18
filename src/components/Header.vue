@@ -52,9 +52,3 @@ export default {
 	}
 };
 </script>
-
-<style scoped>
-.buttons {
-	text-decoration: none;
-}
-</style>

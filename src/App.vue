@@ -26,3 +26,9 @@ export default {
 	})
 };
 </script>
+
+<style>
+.buttons {
+	text-decoration: none;
+}
+</style>
