@@ -1,26 +1,15 @@
 <template>
-	<div>
-		<v-col align="center">
-			<h1>Quel est le but de Roll Eat ?</h1>
-			<v-container class="description">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Curabitur turpis amet urna sagittis, aliquam pulvinar. Id
-					risus lorem pharetra sed. Id tempus aenean dolor, faucibus
-					at donec sollicitudin. Ultrices tellus risus magna diam in
-					praesent elementum aliquam curabitur.
-				</p>
+	<div class="home">
+		<div  id="id-title">
+			<v-container>
+				<h1>
+					Découvrez vos limites !
+				</h1>
+				<router-link to="/order" class="buttons">
+					<v-btn>Commander</v-btn>
+				</router-link>
 			</v-container>
-			<v-img
-				:src="require('../assets/slogan.png')"
-				contain
-				height="350"
-			/>
-			<v-container></v-container>
-			<router-link to="/order" class="buttons">
-				<v-btn>Commander</v-btn>
-			</router-link>
-		</v-col>
+		</div>
 	</div>
 </template>
 
@@ -33,10 +22,23 @@ export default {
 <style scoped>
 h1 {
 	font-size: 50px;
-	color: grey;
+	color: white;
 }
 
 .description {
 	width: 50%;
+}
+.home {
+	background-image: url("../assets/background.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+#id-title{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 </style>
