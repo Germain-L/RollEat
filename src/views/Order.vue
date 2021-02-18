@@ -17,11 +17,15 @@
 						label="Nom de la personne"
 						type="text"
 					></v-text-field>
-					<v-select :items="diets" label="Régime alimentaire"></v-select>
+					<v-select
+						:items="diets"
+						label="Régime alimentaire"
+					></v-select>
 					<v-text-field
 						label="Aliments non désiré / Allergies / Intolerance"
 						type="text"
 					></v-text-field>
+					<v-btn>Ajouter</v-btn>
 				</v-card>
 			</div>
 			<v-btn>Commander</v-btn>
@@ -34,10 +38,17 @@ export default {
 	name: "Order",
 	data() {
 		return {
-      diets: ['De tout', 'Végan', 'Végétarien', 'Pescétarien'],
+			diets: ["De tout", "Végan", "Végétarien", "Pescétarien"],
 			portion_number: 1,
 			total_price: 15,
-			orders: {}
+			orders: [
+				// Example
+				// {
+				// 	name: "",
+				// 	diet: "",
+				// 	foodBlackList: []
+				// }
+			]
 		};
 	}
 };
