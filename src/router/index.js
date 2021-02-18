@@ -39,9 +39,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+    path: '/order',
+    name: 'Order',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Order.vue')
+  },
+  {
     path: '/sandbox/firebase',
     name: 'Firebase-Sandbox',
     component: () => import(/* webpackChunkName: "firebase" */ '../views/sandbox/Firebase.vue')
+  },
+  {
+    path: '/pay',
+    name: 'Paiement',
+    component: () => import(/* webpackChunkName: "firebase" */ '../views/Paiement.vue')
   }
 ];
 
