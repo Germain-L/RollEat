@@ -12,21 +12,7 @@
 				type="number"
 			></v-text-field>
 			<div v-for="index in parseInt(portion_number)" :key="index">
-				<v-card class="py-5 px-5 my-3" elevation="0" outlined>
-					<v-text-field
-						label="Nom de la personne"
-						type="text"
-					></v-text-field>
-					<v-select
-						:items="diets"
-						label="Régime alimentaire"
-					></v-select>
-					<v-text-field
-						label="Aliments non désiré / Allergies / Intolerance"
-						type="text"
-					></v-text-field>
-					<v-btn>Ajouter</v-btn>
-				</v-card>
+				<OrderCard @update-orders="updateOrders"/>
 			</div>
 			<v-btn>Commander</v-btn>
 		</v-col>
@@ -34,22 +20,28 @@
 </template>
 
 <script>
+import OrderCard from '../components/Order_card'
+
 export default {
 	name: "Order",
+	components: {
+		OrderCard
+	},
 	data() {
 		return {
-			diets: ["De tout", "Végan", "Végétarien", "Pescétarien"],
 			portion_number: 1,
 			total_price: 15,
-			orders: [
-				// Example
-				// {
-				// 	name: "",
-				// 	diet: "",
-				// 	foodBlackList: []
-				// }
-			]
+			orders: []
 		};
+	},
+	methods: {
+		updateOrders(order) {
+			this.orders.push(order);
+			console.log(this.orders);
+		},
+		order() {
+			console.log("Ordering")
+		}
 	}
 };
 </script>
