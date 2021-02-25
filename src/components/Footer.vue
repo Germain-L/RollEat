@@ -10,14 +10,6 @@
 					@click="contactDialog = true"
 					>Contact</v-btn
 				>
-				<v-btn
-					small
-					color="warning"
-					class="col-auto mx-2"
-					v-show="loggedIn"
-					@click="logoutDialog = true"
-					>Se déconnecter 🥺</v-btn
-				>
 			</v-row>
 			<br />
 			{{ new Date().getFullYear() }} — <strong>RollEat</strong>
@@ -46,37 +38,6 @@
 				</v-card-text>
 			</v-card>
 		</v-dialog>
-		<v-dialog v-model="logoutDialog" max-width="525">
-			<v-card>
-				<v-card-title class="headline">
-					Voulez-vous vraiment vous déconnecter ?
-				</v-card-title>
-				<v-card-text>
-					<img
-						width="480"
-						src="https://i.imgur.com/OI30Xvb.jpg"
-						alt="Logout cat"
-					/>
-				</v-card-text>
-				<v-card-actions>
-					<v-spacer></v-spacer>
-					<v-btn
-						color="green darken-1"
-						text
-						@click="logoutDialog = false"
-					>
-						NON !
-					</v-btn>
-					<v-btn
-						color="red darken-1"
-						text
-						@click="signOut(), (logoutDialog = false)"
-					>
-						ui
-					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog>
 	</v-footer>
 </template>
 
@@ -86,23 +47,8 @@ export default {
 	data() {
 		return {
 			loggedIn: false,
-			logoutDialog: false,
 			contactDialog: false
 		};
-	},
-	methods: {
-		async signOut() {
-			try {
-				await this.$firebase.auth().signOut();
-				this.$router.replace({
-					path: "Login"
-				});
-			} catch (err) {
-				console.log(err);
-			}
-
-			console.log("T'ES DECO BOLOSSSSSS");
-		}
 	},
 	created() {
 		this.loggedIn = this.$firebase.auth().currentUser ? true : false;
