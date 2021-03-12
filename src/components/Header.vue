@@ -118,7 +118,7 @@
 					{
 						title: 'Mes commandes',
 						icon: 'mdi-food-variant',
-						route: '/orders'
+						route: '/history'
 					}
 				]
 			};
