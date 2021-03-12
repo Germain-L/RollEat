@@ -1,5 +1,5 @@
 <template>
-	<v-footer color="white">
+	<v-footer>
 		<v-col class="text-center" cols="12">
 			<v-row justify="center">
 				<v-btn small class="col-auto mx-2">Qui sommes nous ?</v-btn>
