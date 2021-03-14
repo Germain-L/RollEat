@@ -44,6 +44,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Order.vue')
   },
   {
+    path: '/history',
+    name: 'History',
+    component: () => import(/* webpackChunkName: "about" */ '../views/History.vue')
+  },
+  {
     path: '/sandbox/firebase',
     name: 'Firebase-Sandbox',
     component: () => import(/* webpackChunkName: "firebase" */ '../views/sandbox/Firebase.vue')
