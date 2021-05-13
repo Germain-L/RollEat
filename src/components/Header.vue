@@ -2,7 +2,7 @@
 	<nav>
 		<v-app-bar app elevation="0">
 			<v-toolbar-title>
-				<a color="primary" class="text-decoration-none" href="/">RollEat</a>
+				<v-btn text to="/"><span style="font-size: 1.3em;">RollEat</span></v-btn>
 			</v-toolbar-title>
 
 			<v-spacer></v-spacer>
@@ -89,7 +89,6 @@
 				</v-card-actions>
 			</v-card>
 		</v-dialog>
-
 	</nav>
 </template>
 
