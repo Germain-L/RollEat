@@ -2,11 +2,17 @@
 	<v-footer>
 		<v-col class="text-center" cols="12">
 			<v-row justify="center">
-				<v-btn small class="col-auto mx-2">Qui sommes nous ?</v-btn>
-				<v-btn small color="primary" class="col-auto mx-2" @click="contactDialog = true">Contact</v-btn>
+				<v-col cols="3">
+					<v-btn small class="col-auto mx-2" text to="/about">Qui sommes nous ?</v-btn>
+				</v-col>
+				<v-col cols="3">
+					<v-btn small color="primary" class="col-auto mx-2" @click="contactDialog = true" text>Contact</v-btn>
+				</v-col>
+
+				<v-col cols="12">
+					{{ new Date().getFullYear() }} — <strong>RollEat</strong>
+				</v-col>
 			</v-row>
-			<br />
-			{{ new Date().getFullYear() }} — <strong>RollEat</strong>
 		</v-col>
 		<v-dialog v-model="contactDialog" max-width="525">
 			<v-card>
