@@ -35,9 +35,7 @@ export default {
 	methods: {
 		async submit() {
 			try {
-				await this.$firebase
-					.auth()
-					.signInWithEmailAndPassword(this.email, this.password);
+				await this.$firebase.auth().signInWithEmailAndPassword(this.email, this.password);
 
 				this.$router.replace({
 					path: "/"

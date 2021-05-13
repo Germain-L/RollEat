@@ -70,23 +70,20 @@ export default {
 		submit() {
 			console.log("Mon compte?");
 			if (this.verifyPassword()) {
-				this.$firebase
-					.auth()
-					.createUserWithEmailAndPassword(this.email, this.password)
-					.then(credentials => {
-						credentials.user.updateProfile({
-							displayName: this.pseudo
-						});
-
-						this.$db
-							.collection("users")
-							.doc(credentials.user.uid)
-							.set({
-								username: this.pseudo,
-								email: this.email,
-								creationDate: new Date()
-							});
+				this.$firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(credentials => {
+					credentials.user.updateProfile({
+						displayName: this.pseudo
 					});
+
+					this.$db
+						.collection("users")
+						.doc(credentials.user.uid)
+						.set({
+							username: this.pseudo,
+							email: this.email,
+							creationDate: new Date()
+						});
+				});
 			}
 		}
 	}

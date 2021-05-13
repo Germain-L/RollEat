@@ -53,10 +53,10 @@ export default {
 	methods: {
 		postOrders() {
 			if (this.orderData.nameData == "") {
-				this.snackbarText = "Erreur: Ajouter des noms";
+				this.snackbarText = "Erreur: Ajoutez des noms";
 				this.snackbar = true;
 			} else if (this.orderData.dietData == "") {
-				this.snackbarText = "Erreur: Ajouter des régimes";
+				this.snackbarText = "Erreur: Ajoutez des régimes";
 				this.snackbar = true;
 			} else {
 				this.$emit("update-orders", this.orderData);

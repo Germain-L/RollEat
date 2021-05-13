@@ -40,7 +40,7 @@ export default {
 			console.log(this.orders);
 		},
 		order() {
-			console.log("Ordering")
+			// API Commande UberEats
 		}
 	}
 };
