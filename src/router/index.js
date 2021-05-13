@@ -52,6 +52,11 @@ const routes = [
     path: '/pay',
     name: 'Paiement',
     component: () => import(/* webpackChunkName: "firebase" */ '../views/Paiement.vue')
+  },
+  {
+    path: '/history',
+    name: 'Historique',
+    component: () => import( /* webpackChunkName: "firebase" */ '../views/History.vue')
   }
 ];
 
