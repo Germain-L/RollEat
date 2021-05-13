@@ -64,7 +64,6 @@ export default {
 			}, {
 				merge: true
 			}).then(() => {
-				console.log("Document successfully written!");
 				this.snackbarText = "Votre profil à été mis à jour";
 				this.snackbar = true;
 			}).catch((err) => {
